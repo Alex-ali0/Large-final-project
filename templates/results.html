@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+        <link rel="stylesheet" href="../static/css/style.css">
+<head>
+    <meta charset="UTF-8" />
+    <title>Результаты теста</title>
+</head>
+<body>
+        <header class="header">
+    
+        <img src="../static/img/logo.png" alt="logo" width="100" height="100">
+        <i class="kolontitul"></i>
+        <a href="/" class="ss"> Главная </a>
+        <a href="/info" class="ss"> Информация </a>
+        <a class="ss" href="{{ url_for('courses') }}">Повторить тест</a>
+</form>  
+    </i>
+    <ul class="main-list">
+    </ul>
+            <ul class="main-list">
+    </ul>
+
+  </header>
+
+    <h1 class="info_title2">Ваш результат: {{ score }} из {{ total }}</h1>
+    <ul>
+        {% for key, answer in answers.items() %}
+            <li class="results">
+                <strong>{{ key }}:</strong> {{ answer }}
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
